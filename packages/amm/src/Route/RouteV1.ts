@@ -1,7 +1,6 @@
 import { Price, Token, Type as Currency } from '@sushiswap/currency'
-import invariant from 'tiny-invariant'
-
 import { SushiSwapV2Pool } from '@sushiswap/v2-sdk'
+import invariant from 'tiny-invariant'
 
 export class Route<TInput extends Currency, TOutput extends Currency> {
   public readonly pairs: SushiSwapV2Pool[]
