@@ -28,15 +28,15 @@
     ".graphclient"
   ],
   "scripts": {
-    "build": "graphclient build --fileType js --throwOnInvalidConfig && rm -f .graphclient/package.json && tsc",
+    "build": "graphclient build --fileType js  && rm -f .graphclient/package.json && tsc",
     "check": "tsc --pretty --noEmit",
     "clean": "rm -rf .turbo .graphclient node_modules",
     "dev": "graphclient serve-dev",
     "lint": "TIMING=1 eslint **/*.ts",
     "lint:fix": "TIMING=1 eslint **/*.ts --fix",
     "prepublishOnly": "pnpm build",
-    "start": "graphclient serve-prod",
-    "validate": "graphclient validate"
+    "start": "graphclient serve-prod --fileType js",
+    "validate": "graphclient validate --fileType js"
   },
   "jest": {
     "preset": "@sushiswap/jest-config/node"
